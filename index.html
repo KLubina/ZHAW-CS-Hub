@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITET-Hub – BSc ITET ETH</title>
+    <style>
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1d27;
+            --surface2: #232733;
+            --border: #2e3345;
+            --text: #e2e4ed;
+            --text-dim: #8b8fa7;
+            --accent: #6c8aff;
+            --accent-glow: rgba(108, 138, 255, .18);
+            --sem1: #5b9aff;
+            --sem3: #f0a050;
+            --radius: 14px;
+            --transition: .3s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 24px 80px;
+        }
+
+        .hub-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .hub-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--sem1), var(--sem3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .hub-header p {
+            color: var(--text-dim);
+            font-size: 1rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 960px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 26px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            background: var(--surface2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(108, 138, 255, .15);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            font-size: .88rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .card-arrow {
+            margin-top: auto;
+            padding-top: 12px;
+            font-size: .85rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hub-header">
+        <h1>ITET-Hub</h1>
+        <p>BSc Elektro- und Informationstechnologie · ETH Zürich</p>
+    </div>
+
+    <div class="cards-grid">
+        <a href="../ITET-Exam-Hub/index.html" class="card">
+            <div class="card-icon">📝</div>
+            <div class="card-title">ITET-Exam-Hub</div>
+            <div class="card-desc">Prüfungsrelevante Übersicht aller Module und Prüfungsinformationen.</div>
+            <div class="card-arrow">Öffnen →</div>
+        </a>
+
+        <a href="../ITET-Learning-Hub/index.html" class="card">
+            <div class="card-icon">📖</div>
+            <div class="card-title">ITET-Learning-Hub</div>
+            <div class="card-desc">Lernressourcen, Vorlesungsnotizen und Unterlagen für das Studium.</div>
+            <div class="card-arrow">Öffnen →</div>
+        </a>
+
+        <a href="../CurriculumMindMap-ITET/index.html" class="card">
+            <div class="card-icon">🗺️</div>
+            <div class="card-title">Curriculum Mind Map</div>
+            <div class="card-desc">Interaktive Mind Map aller Module, Themen und Abhängigkeiten.</div>
+            <div class="card-arrow">Öffnen →</div>
+        </a>
+    </div>
+</body>
+
+</html>
